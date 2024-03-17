@@ -1,0 +1,371 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+
+:root{
+  --light-green:#DCFFB7;
+  --light-red:#f33b3b;
+  --light-orange:#FFBB64;
+  --light-yellow:#FFEAA7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #416D19;
+}
+
+body {
+  background-color: var(--light-yellow);
+}
+
+a:link, a:visited{
+  text-decoration: none;  
+}
+
+header{
+  font-family: 'Pacifico';
+}
+
+.top-bar {
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 10vh;
+  height: 10vh;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  background-color: var(--light-green);
+}
+
+#logo{
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+
+#logo span {
+  position: relative;
+  left: 0;
+  bottom: 1vh;
+  font-weight: 700;
+  font-size: 5rem;
+  color: var(--light-red);
+}
+
+.nav-link{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-link a{
+  padding: 1rem;
+}
+
+.nav-link a, #logo div{
+  font-size: 2.5rem;
+}
+
+
+.H1,.H2{
+  margin-top: 5vh;
+  margin-bottom: 5vh ;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start; 
+  background-color: var(--light-green);
+
+}
+
+.H1{
+  height: 100vh;
+}
+
+.H2{
+  height: 200vh;
+}
+
+.H1 div:first-child{
+  font-family: 'Oswald';
+  font-weight: 400;
+  font-size: 15rem;
+  width: 100vw;
+  text-align: center;
+  text-shadow: 2px 0 20px #101b06;
+}
+
+.H1 div,.H2 div{
+  padding-bottom: 1vh;
+  font-family: "Pacifico";
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+div span.highlight{
+  color: var(--light-red);
+  font-weight: 600;
+}
+
+.sc2-text1{
+  position: relative;
+  height: 20vh;
+  width: 100vw;
+  aspect-ratio: 564/752;
+}
+
+.sc2-text1 img{
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  opacity: 0.8;
+  filter: blur(5px);
+}
+
+.layer-penguin{
+  position: absolute;
+  z-index: 1;
+  width: 50vw;
+  aspect-ratio: 564/752;
+  background: linear-gradient(180deg, rgba(220,255,183,1) 0%, rgba(139,179,101,0.8225665266106442) 49%, rgba(220,255,183,1) 100%);
+}
+
+.sc2-text1 span{
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+
+
+#Achievement {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--light-green);
+  font-family: "Pacifico";
+  font-size: 2.5rem;
+  font-weight: 500;
+  width: 100%;
+}
+
+.MyA{
+  font-family: 'Oswald';
+  font-weight: 400;
+  font-size: 3rem;
+  margin-bottom: 5vh;
+}
+
+.MyA-text{
+  margin-bottom: 5vh;
+}
+
+.align-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  width: 95%;
+}
+
+.slider-wrapper {
+  position: relative;
+}
+
+.slider-wrapper .slide-button {
+  position: absolute;
+  top: 50%;
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 50px;
+  z-index: 5;
+  color: #fff;
+  display: flex;
+  cursor: pointer;
+  font-size: 2.2rem;
+  background: #000;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.slider-wrapper .slide-button:hover {
+  background: #404040;
+}
+
+.slider-wrapper .slide-button#prev-slide {
+  left: -25px;
+  display: none;
+}
+
+.slider-wrapper .slide-button#next-slide {
+  right: -25px;
+}
+
+.slider-wrapper .image-list {
+  display: flex; /* Sử dụng display flex thay vì grid */
+  white-space: nowrap; /* Ngăn chặn xuống dòng */
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.image-list{
+  white-space: nowrap;
+}
+
+.slider-wrapper .image-list::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-wrapper .image-list .image-item {
+  flex: 0 0 400px; /* Kích thước chiều ngang là 400px */
+  height: 534px; /* Chiều cao được tính toán dựa trên tỉ lệ 3024:4024 */
+  object-fit: cover; /* Giữ tỉ lệ khung hình */
+  margin-right: 18px; /* Khoảng cách giữa các ảnh */
+}
+
+
+.container .slider-scrollbar {
+  height: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.slider-scrollbar .scrollbar-track {
+  background: #ccc;
+  width: 100%;
+  height: 2px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  position: relative;
+}
+
+.slider-scrollbar:hover .scrollbar-track {
+  height: 4px;
+}
+
+.slider-scrollbar .scrollbar-thumb {
+  position: absolute;
+  background: #000;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  cursor: grab;
+  border-radius: inherit;
+}
+
+.slider-scrollbar .scrollbar-thumb:active {
+  cursor: grabbing;
+  height: 8px;
+  top: -2px;
+}
+
+.slider-scrollbar .scrollbar-thumb::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  bottom: -10px;
+}
+
+footer {
+  background-color: #000; /* Màu đen */
+  color: #fff; /* Màu chữ trắng */
+  height: 10vh; /* Chiều cao là 10% chiều cao của cửa sổ */
+  padding: 20px; /* Khoảng cách giữa nội dung và viền của footer */
+  text-align: center; /* Canh giữa nội dung */
+}
+
+/* Styles for mobile and tablets */
+@media only screen and (max-width: 720px) {
+
+#logo span {
+  font-size: 3rem;
+}
+
+.nav-link a, #logo div{
+  font-size: 1.5rem;
+}
+
+.H1 div:first-child{
+  font-size: 7rem;
+}
+
+.H1 div, .H2 div {
+  font-size: 1.5rem; 
+}
+
+.sc2-text1 img{
+  width: 100vw;
+}
+
+.layer-penguin{
+  width: 100vw;
+}
+
+.H2 {
+  height: 163vh;
+}
+
+#Achievement {
+  font-size: 1.5rem;
+  min-height: 110vh;
+}
+
+.MyA{
+  font-size: 3rem;
+}
+
+
+.slider-wrapper .slide-button {
+  display: none !important;
+}
+
+.slider-wrapper .image-list {
+  gap: 10px;
+  margin-bottom: 15px;
+  scroll-snap-type: x mandatory;
+}
+
+.slider-wrapper .image-list .image-item {
+  flex: 0 0 calc(80vw); /* Thay đổi kích thước ảnh */
+  height: 70vh; /* Đảm bảo tỉ lệ chiều cao tự động */
+  object-fit: cover;
+  margin-right: 5vw; /* Khoảng cách giữa các ảnh là 10vw */
+}
+
+.image-list img:first-child{
+  margin-left: 5vw;
+}
+
+.image-item{
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;        
+  border-radius: 15px;
+}
+
+.slider-scrollbar .scrollbar-thumb {
+  width: 20%;
+}
+
+}
+    
